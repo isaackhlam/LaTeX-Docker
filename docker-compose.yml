@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  latex:
+    image: texlive/texlive:latest
+    container_name: latex-env
+    working_dir: /work
+    volumes:
+      - ./:/work
+    command: tail -f /dev/null   # Keep container running
+
